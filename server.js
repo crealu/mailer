@@ -1,7 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const port = 4400 || process.env.PORT;
-require('dotenv').config({ path: '../.env' });
+// require('dotenv').config({ path: '.env' });
 
 const app = express();
 
@@ -15,16 +15,17 @@ app.get('/', (req, res) => {
 		</ul>
 	`;
 
-	let transporter = nodemailer.createTransport({
-		service: 'gmail',
+	let smtpConfig = {
+		host: 'smtp.gmail.com',
+		port: 465,
+		secure: true,
 		auth: {
 			user: process.env.THE_EMAIL,
 			pass: process.env.THE_KEY
 		},
-		tls: {
-			rejectUnauthorized: false
-		}
-	});
+	}
+
+	let transporter = nodemailer.createTransport(smtpConfig);
 
 	let mailOptions = {
 		from: 'Niheigo <niheigodev@site.com>',
