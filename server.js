@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.post('/send-member', (req, res) => {
 	// console.log(req.body);
-	const output = req.body.date;
+	const output = 'test';
 	
 	let smtpConfig = {
 		host: 'smtp.gmail.com',
