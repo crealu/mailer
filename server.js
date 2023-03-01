@@ -1,18 +1,20 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const port = 4400 || process.env.PORT;
-// require('dotenv').config({ path: '.env' });
+require('dotenv').config({ path: '.env' });
 
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.send('Server running');
+	res.sendFile('membershipForm.html', { root: './' });
 });
 
 app.post('/send-member', (req, res) => {
-	const ouput = 'test';
+	// console.log(req.body);
+	const output = req.body.date;
 	
 	let smtpConfig = {
 		host: 'smtp.gmail.com',
@@ -27,8 +29,8 @@ app.post('/send-member', (req, res) => {
 	let transporter = nodemailer.createTransport(smtpConfig);
 
 	let mailOptions = {
-		from: 'Niheigo <niheigodev@site.com>',
-		to: 'niheigodev@gmail.com',
+		from: 'Email <email@site.com>',
+		to: 'email@gmail.com',
 		subject: 'Membership Request',
 		text: 'text',
 		html: output
@@ -39,7 +41,7 @@ app.post('/send-member', (req, res) => {
 		console.log(info);
 	});
 
-	res.send('Membership submitted');
+	res.redirect('/');
 })
 
 app.listen(port, () => console.log('listening on 4400'));

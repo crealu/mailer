@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Lato:wght@700&family=Oxygen:wght@300;400&display=swap');
+
+:root {
+  --cda-color: #25ade9;
+}
+
+body {
+  font-family: 'Lato';
+  background: lightblue;
+}
+
+.page-center {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  background: white;
+}
+
+.top-bar {
+  height: 200px;
+  width: 700px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 150px;
+  position: relative;
+  float: left;
+}
+/* second blue #1c4c61 */
+.main-title {
+  position: relative;
+  float: left;
+/*  color: #25ade9;*/
+  color: var(--cda-color);
+  top: 25px;
+}
+
+.nav-list {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  list-style-type: none;
+  background: black;
+  height: 30px;
+  border-bottom: 10px solid darkgray;
+  padding-left: 0px;
+}
+
+.nav-item {
+  display: inline-block;
+  float: left;
+  margin: 0px 17px;
+  transition: 0.5s ease;
+}
+
+.nav-item:hover {
+  background: lightgray;
+}
+
+.nav-item:hover .nav-link {
+  color: #25ade9;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.current-page {
+  background: var(--cda-color);
+  padding-bottom: 11px;
+}
+
+.contents {
+  width: 700px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+  top: 40px;
+}
+
+.meeting-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.meeting-info {
+  text-align: center;
+}
+
+.event-wrapper {
+  padding-top: 30px;
+}
+
+.event-name {
+  font-size: 40px;
+}
+
+.upcoming-events {
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.event-row {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.event-date {
+  width: 100px;
+  padding: 15px;
+  margin: 0px;
+  border-right: 1px solid black;
+}
+
+.event-title {
+  padding-left: 10px;
+}
+
+.main-footer {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #292929;
+  color: white;
+}
+
+.footer-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  text-align: right;
+}
+
