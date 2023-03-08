@@ -40,69 +40,154 @@
 			</li>
 		</ul>
 
-		<form class="membership-form">
+		<form class="membership-form" action="/send-member" method="POST">
 			<div class="form-field">
 				<label class="form-label">Submittal Date</label>
-				<input class="form-input">
+				<input class="form-input" name="submittalDate">
 			</div>
 
 			<div class="form-field">
 				<label class="form-label">Precinct #</label>
-				<input class="form-input">
+				<input class="form-input" name="precinct">
 			</div>
 
 			<div class="form-field">
 				<label class="form-label">Name</label>
-				<input class="form-input">
+				<input class="form-input" name="name">
 			</div>			
 
 			<div class="form-field">
 				<label class="form-label">Address</label>
-				<input class="form-input" placeholder="Street, City, State, Zip">
+				<input class="form-input" placeholder="Street, City, State, Zip" name="address">
 			</div>			
 
 			<div class="form-field">
 				<label class="form-label">Contact Phone</label>
-				<input class="form-input" placeholder="000-123-4567">
+				<input class="form-input" placeholder="000-123-4567" name="phone">
 			</div>
 
 			<div class="form-field">
 				<label class="form-label">Email</label>
-				<input class="form-input">
+				<input class="form-input" name="email">
 			</div>			
 
 			<div class="form-field">
 				<label class="form-label">Employer</label>
-				<input class="form-input">
+				<input class="form-input" name="employer">
 			</div>
 
 			<div class="form-field">
 				<label class="form-label">Occupation</label>
-				<input class="form-input">
+				<input class="form-input" name="occupation">
 			</div>
 
 			<div class="form-field">
 				<label class="form-label">Recruited By</label>
-				<input class="form-input">
+				<input class="form-input" name="recruitedBy">
 			</div>
 
 			<p class="contact-question">How would you like to be contacted?</p>
 
-			<div class="radio-field">
-				<label class="radio-label">Mail</label>
-				<input class="radio-input" type="radio">			
+			<div class="contact-field-wrapper">
+				<div class="radio-field">
+					<label class="radio-label">Mail</label>
+					<input class="radio-input" type="checkbox" name="mailContact">			
+				</div>
+
+				<div class="radio-field">
+					<label class="radio-label">Email</label>
+					<input class="radio-input" type="checkbox" name="emailContact">			
+				</div>
+
+				<div class="radio-field">
+					<label class="radio-label">Phone</label>
+					<input class="radio-input" type="checkbox" name="phoneContact">			
+				</div>
 			</div>
 
-			<div class="radio-field">
-				<label class="radio-label">Email</label>
-				<input class="radio-input" type="radio">			
+			<h3 class="committee-title">Committee</h3>
+			<p class="committee-text">I am interested in joining the following committees:</p>
+
+			<div class="committee-field-wrapper">
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="memI">			
+					<label class="committee-label">Membership</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="nomI">								
+					<label class="committee-label">Nominating</label>
+				</div>			
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="issueAdvI">			
+					<label class="committee-label" >Issues Advocacy</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="commServI">			
+					<label class="committee-label" >Community Service</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="legisI">			
+					<label class="committee-label" >Legislative</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="legalI">			
+					<label class="committee-label" >Legal</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="commI">			
+					<label class="committee-label" >Communications</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="fundI">			
+					<label class="committee-label" >Fundraising</label>
+				</div>
+
+				<div class="committee-field">
+					<input class="committee-input" type="checkbox" name="voterRegI">			
+					<label class="committee-label" >Voter Registration</label>
+				</div>
 			</div>
 
-			<div class="radio-field">
-				<label class="radio-label">Phone</label>
-				<input class="radio-input" type="radio">			
+			<h3 class="annual-dues-title">ANNUAL DUES</h3>
+			<p class="annual-dues-text">My $25 annual dues are enclosed as:</p>
+
+			<div class="annual-dues-field-wrapper">
+				<div class="annual-dues-field">
+					<input class="annual-dues-input" type="checkbox" name="duesCash">			
+					<label class="annual-dues-label">Cash</label>
+				</div>				
+
+				<div class="annual-dues-field">
+					<input class="annual-dues-input" type="checkbox" name="duesCheck">			
+					<label class="annual-dues-label">Check</label>
+				</div>
+
+				<div class="annual-dues-field">
+					<p class="annual-dues-option">
+						Pay with <a href="https://www.zellepay.com/" target="_blank">Zelle</a>
+					</p>
+				</div>
 			</div>
 
+			<div class="sign-field">
+				<label class="form-label">Signature (Print)</label>
+				<input class="form-input" name="signature">
+			</div>
+
+			<div class="sign-field">
+				<label class="form-label">Date</label>
+				<input class="form-input" placeholder="dd/mm/yy" name="date">
+			</div>
+
+			<button class="submit-btn">Submit</button>
+			<p class="submit-msg">Once button is clicked, form is cleared and submitted.</p>
 		</form>
 
 		<footer class="main-footer">
@@ -110,5 +195,13 @@
 		</footer>
 
 	</div>
+
+	<script>
+		let membershipForm = document.getElementsByClassName('membership-form')[0];
+		membershipForm.addEventListener('submit', (event) => {
+			// event.preventDefault();
+			alert('Form submitted');
+		});
+	</script>
 </body>
 </html>

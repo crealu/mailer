@@ -33,9 +33,75 @@
 	margin-top: 20px;
 }
 
+.contact-field-wrapper {
+	height: 40px;
+	margin-bottom: 20px;
+}
+
 .radio-field {
 	float: left;
 	width: 20%;
 	padding-right: 20px;
 	margin-bottom: 30px;
 }
+
+.committee-title {
+	border-top: 1px solid black;
+}
+
+.committee-field-wrapper {
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.committee-field {
+	position: relative;
+	float: left;
+	width: 30%;
+	padding-right: 20px;
+	margin-bottom: 15px;
+}
+
+.annual-dues-title {
+	border-top: 1px solid black;
+}
+
+.annual-dues-field-wrapper {
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.annual-dues-field {
+	position: relative;
+	float: left;
+	width: 30%;
+	padding-right: 20px;
+	margin-bottom: 30px;
+}
+
+.annual-dues-option {
+	margin-top: 0px;
+}
+
+.sign-field {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+}
+
+.submit-btn {
+	width: 100px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	font-size: 22px;
+	padding: 8px 12px;
+	margin-top: 20px;
+	background: var(--cda-color);
+}
+
+.success-response {
+	text-align: center;
+}
+
