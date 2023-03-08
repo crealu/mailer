@@ -41,6 +41,7 @@ app.post('/send-member', (req, res) => {
 		console.log(info);
 	});
 
+	res.send('received');	
 	res.redirect('/');
 })
 
